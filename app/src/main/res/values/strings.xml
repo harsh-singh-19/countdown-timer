@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Timer</string>
+
+    <!-- Timer input edit text hint-->
+    <string name="input_hint">00</string>
+
+    <!-- Timer input label-->
+    <string name="input_hours_label">h</string>
+    <string name="input_minutes_label">m</string>
+    <string name="input_seconds_label">s</string>
+
+    <!-- Timer buttons label -->
+    <!-- Primary button -->
+    <string name="timer_btn_label_start">Start</string>
+    <string name="timer_btn_label_pause">Pause</string>
+    <string name="timer_btn_label_resume">Resume</string>
+    <string name="timer_btn_label_restart">Restart</string>
+
+    <!-- Secondary button -->
+    <string name="timer_btn_label_cancel">Cancel</string>
+    <string name="timer_btn_label_dismiss">Dismiss</string>
+</resources>

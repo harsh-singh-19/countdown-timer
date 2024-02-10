@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="128dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toTopOf="@id/primary_timer_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00:00:00" />
+
+        <LinearLayout
+            android:id="@+id/timer_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/primary_timer_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/hours_input"
+                style="@style/TimerInput"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_hint" />
+
+            <TextView
+                style="@style/TimerInputColon"
+                android:text="@string/input_hours_label" />
+
+            <EditText
+                android:id="@+id/minutes_input"
+                style="@style/TimerInput"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_hint" />
+
+            <TextView
+                style="@style/TimerInputColon"
+                android:text="@string/input_minutes_label" />
+
+            <EditText
+                android:id="@+id/seconds_input"
+                style="@style/TimerInput"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_hint" />
+
+            <TextView
+                style="@style/TimerInputColon"
+                android:text="@string/input_seconds_label" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/secondary_timer_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/timer_btn_label_cancel"
+            app:layout_constraintBaseline_toBaselineOf="@+id/primary_timer_button"
+            app:layout_constraintEnd_toStartOf="@+id/primary_timer_button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/primary_timer_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="128dp"
+            android:text="@string/timer_btn_label_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/secondary_timer_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
